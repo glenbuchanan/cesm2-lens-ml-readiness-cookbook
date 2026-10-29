@@ -29,7 +29,8 @@ members the model has never seen, so the score has to come from unseen members. 
 threshold are fit on training members only, refit inside every validation fold, so no held-out member helps fit the transforms
 that label it. What a member-blind split, or a transform fit before the split, would do to the score is not assumed: the notebook
 scores the same model all three ways and prints the gaps against their per-fold spread. The same honesty runs to the end: a refinement trial
-is promoted only on a corrected paired test, with the Bonferroni line printed beside it; the
+is promoted on a paired test with a corrected standard error (uncorrected `p < 0.05`), with the Bonferroni line printed
+beside it so you can see which promotions survive it (the shipped example does not); the
 held-out test runs only when you set `FINAL = True` after your last trial, and the notebook teaches you to report that result plainly,
 including when nothing beats the base rate.
 
@@ -74,7 +75,7 @@ as a paired test; tests once; and ends with a written justification.
 autumns are followed by slightly fewer wet winters than the base rate, moderate La Niña autumns by more, and the strongest La Niña
 by fewer. The Niño-sign rule therefore sits below the base rate, a linear model can only learn a sign (the logistic rung at the
 base-rate threshold is close to the sign rule reversed), and a boosting model, which can bend with the relation, scores above the
-base rate on validation folds. Registering it as a trial and running the held-out test are the learner's to do. The limits are stated up front: a
+base rate on validation folds at the base-rate decision threshold (at the default 0.5 it calls almost nothing wet). Registering it as a trial and running the held-out test are the learner's to do. The limits are stated up front: a
 model-world study (CESM2 winters scored against CESM2 winters, never against observations, with CESM2's own ENSO and
 teleconnection), on a ~1° grid that smooths the Front Range's orography, in a default season (DJF) that NWS Boulder does not name
 as El Niño's wet season east of the Divide. A result here is not a result for the real Front Range; the Summary names the change
