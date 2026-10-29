@@ -1,4 +1,4 @@
-# data/ — the Module 2 member-winter cache
+# data/ — the member-winter cache
 
 `member_winters.csv` is written by `02_applications.ipynb` (cell "Deriving the member-winter table") and read by every later cell.
 Its first line is a `#` header recording the parameters it was derived with (SEASON, WINDOW, FRONT_RANGE, NINO34, n_members_per_half,
@@ -30,7 +30,7 @@ Shape of the committed copy, each value measured from the file itself (the comma
   `AUTUMN_MONTHS` field: the notebook reads a header without it as `AUTUMN_MONTHS=[9, 10, 11]`, the only autumn
   the derivation code had when the table was written, so a changed `AUTUMN_MONTHS` still fails against it; a rebuilt header carries the field.
 - The committed copy is the **full table**: `N_MEMBERS_PER_HALF = 50`, every member of both halves (the header records it, and 2a prints
-  the member and winter counts it actually read). It was produced by setting `REBUILD = True` in the notebook — a background job: the course's one full derivation took 33 min
+  the member and winter counts it actually read). It was produced by setting `REBUILD = True` in the notebook — a background job: the one full derivation took 33 min
   on a fast link (2026-10-20); on home broadband expect an hour or more (the notebook's 2a `chunking` line computes it from the store: four 600-month chunks of about 133 MB, read whole, ≈ 530 MB per member-variable, three variables, ≈ 160 GB for 100 members) — and the notebook wrote the access date into the header's `access=` field. **A rebuild is a new access:** the `REBUILD = True` branch stamps the
   day it reads S3 into `ACCESS_DATE`, the header and every figure's citation; on every other run the notebook asserts
   the header's `access=` equals the parameter cell's `ACCESS_DATE`, so the two cannot drift.

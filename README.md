@@ -11,16 +11,19 @@ walked along the analysis spine of NSF Unidata's
 [*Supervised Machine Learning Readiness*](https://github.com/Unidata/supervised-ml-readiness) course.
 
 This cookbook is for Earth system scientists, engineers and software staff who are new to machine learning, or who use it
-without training. It assumes Python at the level of the [ESDS Xarray tutorial](https://ncar.github.io/esds/) and no ML.
+without training. It assumes Python at the level of the [Xarray tutorial](https://tutorial.xarray.dev/) and no ML.
 Time to learn: see the reading-time line in the notebook's Prerequisites cell; about two minutes running from the committed cache,
-plus a one-time data derivation only if you re-derive the table (the course's one full run took 33 minutes on a fast link; on home
+plus a one-time data derivation only if you re-derive the table (the one full run took 33 minutes on a fast link; on home
 broadband expect an hour or more).
 
 ## Motivation
 
-The existing [CESM LENS on AWS Cookbook](https://projectpythia.org/cesm-lens-aws-cookbook/) shows how to open the ensemble;
-the [Landsat ML Cookbook](https://projectpythia.org/landsat-ml-cookbook/) shows ML on satellite imagery. Nothing in the gallery
-yet joins the two: a supervised model on a **large ensemble**. This cookbook teaches the whole spine on that data and changes
+The existing [CESM LENS on AWS Cookbook](https://projectpythia.org/cesm-lens-aws-cookbook/) covers reading and analysing the
+40-member CESM1 Large Ensemble with Xarray and Dask; the [scikit-learn Argo](https://projectpythia.org/sklearn-argo-cookbook/),
+[Landsat ML](https://projectpythia.org/landsat-ml-cookbook/) and [xbatcher ML](https://projectpythia.org/xbatcher-ML-1-cookbook/)
+cookbooks apply machine learning to ocean profiles, satellite imagery and CNN training batches, and the
+[EO Data Science](https://projectpythia.org/eo-datascience-cookbook/) cookbook includes a supervised classifier on Sentinel-2 imagery. None yet walks a newcomer through
+a supervised classifier on a **large ensemble**, where the members themselves are the unit the split has to respect. This cookbook teaches the whole spine on that data and changes
 exactly one of Unidata's steps on purpose: the split is **by ensemble member**. Two reasons hold it there. The question is about
 members the model has never seen, so the score has to come from unseen members. And the forced-response curve and the wet
 threshold are fit on training members only, refit inside every validation fold, so no held-out member helps fit the transforms
@@ -62,22 +65,28 @@ This cookbook is one notebook with two companion documents. What each file is fo
 
 ### The notebook
 
-`notebooks/02_applications.ipynb` — *Module 2 · Applications: a classifier on CESM2 LENS*. Part 1 frames the question as a
+`notebooks/02_applications.ipynb` — *A supervised classifier on CESM2 LENS*. Part 1 frames the question as a
 decision. Part 2 locates the data through the `intake-esm` catalogue and fills a Metadata Document, explores the target and the
 input, and splits by ensemble member. Part 3 climbs a three-rung ladder (logistic regression → decision tree → gradient boosting)
 against the base rate and a one-rule classifier; validates with a confusion matrix, precision and recall; runs refinement trials
 as a paired test; tests once; and ends with a written justification.
-It is Module 2 of a three-module staff course, which is why the file keeps its module number. **Modules 1 and 3 are not in this
-repository.** Module 1 is a no-code lesson whose two ideas (the spine, and the failure each step guards against) the notebook's Overview
-and Summary restate, so it is not needed to start. Module 3 continues on the same data with a small neural network; the handbook and
-rubric carry its prompts and criteria (entries 12 onward), with no notebook here to answer them.
+**What to expect.** On the committed table the answer comes out close to *no*: the Niño-sign rule's precision sits below the
+base rate, no rung's sits clearly above it, and the one trial the register promotes clears only the uncorrected test, not the
+multiple-comparison line. The held-out test is left for the learner to run once. The notebook says so up front and treats it as
+the result. It is a model-world study (CESM2 winters scored against CESM2 winters, never against observations, with CESM2's own
+ENSO and teleconnection) on a ~1° grid that smooths the Front Range's orography, so a null here is not a null for the real Front
+Range; the Summary names the next change that could test that.
+
+The notebook stands on its own. It is also the classical-ML half of a longer open-source introduction to machine learning for NSF
+NCAR staff ([ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course)), which keeps the file's
+number; nothing in that repository is needed here.
 
 ### Data
 
 `notebooks/data/member_winters.csv` is the **full** member-winter table (50 members per forcing half, every member of the
-ensemble), derived by the notebook itself and committed (under 1 MB), so the book builds without touching S3 for the heavy step.
+ensemble), derived by the notebook itself and committed (about 0.7 MB), so the book builds without touching S3 for the heavy step.
 The notebook asserts the cache header against its parameter cell before reading it, and re-derives the table from S3 when
-`REBUILD = True` (the course's one full derivation took 33 minutes on a fast link; on home broadband expect an hour or more). See
+`REBUILD = True` (the one full derivation took 33 minutes on a fast link; on home broadband expect an hour or more). See
 `notebooks/data/README.md`.
 
 ## Data citation
