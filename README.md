@@ -70,12 +70,13 @@ decision. Part 2 locates the data through the `intake-esm` catalogue and fills a
 input, and splits by ensemble member. Part 3 climbs a three-rung ladder (logistic regression → decision tree → gradient boosting)
 against the base rate and a one-rule classifier; validates with a confusion matrix, precision and recall; runs refinement trials
 as a paired test; tests once; and ends with a written justification.
-**What to expect.** On the committed table the answer comes out close to *no*: the Niño-sign rule's precision sits below the
-base rate, no rung's sits clearly above it, and the one trial the register promotes clears only the uncorrected test, not the
-multiple-comparison line. The held-out test is left for the learner to run once. The notebook says so up front and treats it as
-the result. It is a model-world study (CESM2 winters scored against CESM2 winters, never against observations, with CESM2's own
-ENSO and teleconnection) on a ~1° grid that smooths the Front Range's orography, so a null here is not a null for the real Front
-Range; the Summary names the next change that could test that.
+**What to expect.** The signal is weak, and the notebook has you measure how weak: the Niño-sign rule's precision sits below
+the base rate, and the logistic rung at the base-rate threshold is not clearly above it. Whether a nonlinear rung does better is the
+next trial the register leaves room for, and the held-out test is the learner's to run once. The limits are stated up front: a
+model-world study (CESM2 winters scored against CESM2 winters, never against observations, with CESM2's own ENSO and
+teleconnection), on a ~1° grid that smooths the Front Range's orography, in a default season (DJF) that NWS Boulder does not name
+as El Niño's wet season east of the Divide. A result here is not a result for the real Front Range; the Summary names the change
+that would test that.
 
 The notebook stands on its own. It is also the classical-ML half of a longer open-source introduction to machine learning for NSF
 NCAR staff ([ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course)), which keeps the file's
@@ -160,6 +161,6 @@ the notebook reads the AWS copy of the ensemble, so no GLADE path is needed.
 
 - Code is Apache-2.0; non-code content is CC BY 4.0 (the Project Pythia split). Data are under the UCAR Data Terms of Use (CC BY 4.0).
 - Nothing in this cookbook is export-controlled: open data, open code.
-- Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR, COMET or NSF Unidata; it is offered to the
+- Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR or NSF Unidata; it is offered to the
   Project Pythia community for its own review.
 - Drafting: Drafted with AI assistance (Anthropic's Claude) from cited sources, under the author's direction; the author's line-by-line edit and a subject-matter review are still to come.

@@ -1,5 +1,5 @@
 # cesm2-lens-ml-readiness-cookbook — build + execution environment, named <cookbook-name>-dev as Project Pythia asks.
-# The science pins match the course's environment.yml for every library this notebook imports (conda-forge, pinned);
+# The science pins cover every library this notebook imports (conda-forge, pinned);
 # they are the versions the notebook was last executed with. Bump them on purpose and re-run the build,
 # never by letting a resolver drift. mystmd and jupyterlab-myst are the book toolchain the template adds, left unpinned as
 # the template leaves them.
