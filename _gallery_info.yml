@@ -1,6 +1,13 @@
-thumbnail: thumbnail.png
+thumbnail: thumbnails/thumbnail.png
 tags:
   domains:
-    - sampledomain
+    - climate
+    - climate modeling
+    - machine learning
+    - data science
   packages:
-    - samplepackage
+    - xarray
+    - intake-esm
+    - scikit-learn
+    - pandas
+    - matplotlib

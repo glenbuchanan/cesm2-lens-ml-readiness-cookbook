@@ -9,6 +9,9 @@ jobs:
   build:
     if: ${{ github.repository_owner == 'ProjectPythia' }}
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
+    with:
+      # --strict: a notebook cell error fails the nightly build (see publish-book.yaml).
+      build_command: 'myst build --execute --html --strict'
 
   deploy:
     needs: build

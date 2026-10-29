@@ -10,6 +10,10 @@ on:
 jobs:
   build:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
+    with:
+      # --strict: a notebook cell error (or any other build error) fails the build. Without it `myst build --execute --html`
+      # exits 0 and publishes the traceback into the page.
+      build_command: 'myst build --execute --html --strict'
 
   deploy:
     needs: build
