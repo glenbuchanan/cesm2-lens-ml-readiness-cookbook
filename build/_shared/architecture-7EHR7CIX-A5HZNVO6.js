@@ -1,1 +1,1 @@
-import{a as e,b as r}from"/cookbook-template/build/_shared/chunk-7FGDXJSL.js";import"/cookbook-template/build/_shared/chunk-GEZIJWLJ.js";import"/cookbook-template/build/_shared/chunk-RAQ24GF6.js";export{e as ArchitectureModule,r as createArchitectureServices};
+import{a as e,b as r}from"/cesm2-lens-ml-readiness-cookbook/build/_shared/chunk-7FGDXJSL.js";import"/cesm2-lens-ml-readiness-cookbook/build/_shared/chunk-GEZIJWLJ.js";import"/cesm2-lens-ml-readiness-cookbook/build/_shared/chunk-RAQ24GF6.js";export{e as ArchitectureModule,r as createArchitectureServices};

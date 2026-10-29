@@ -1,1 +1,34 @@
-/* No Custom Stylesheet Provided */
+/* User Provided Stylesheet */
+
+
+.myst-fm-downloads-button {
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article :is(h1, h2, h3, h4, h5, h6).group {
+  padding-right: 0.75em;
+  overflow-x: clip;
+}
+
+.myst-search-bar {
+  position: relative;
+}
+@media (max-width: 639.98px) {
+  .myst-search-bar .myst-search-text-placeholder {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+}

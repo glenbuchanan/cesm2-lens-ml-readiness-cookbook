@@ -1,1 +1,1 @@
-import{a}from"/cookbook-template/build/_shared/chunk-4V32KBWC.js";import"/cookbook-template/build/_shared/chunk-IENSSAEB.js";import"/cookbook-template/build/_shared/chunk-RAQ24GF6.js";export default a();
+import{a}from"/cesm2-lens-ml-readiness-cookbook/build/_shared/chunk-4V32KBWC.js";import"/cesm2-lens-ml-readiness-cookbook/build/_shared/chunk-IENSSAEB.js";import"/cesm2-lens-ml-readiness-cookbook/build/_shared/chunk-RAQ24GF6.js";export default a();
