@@ -70,17 +70,18 @@ decision. Part 2 locates the data through the `intake-esm` catalogue and fills a
 input, and splits by ensemble member. Part 3 climbs a three-rung ladder (logistic regression → decision tree → gradient boosting)
 against the base rate and a one-rule classifier; validates with a confusion matrix, precision and recall; runs refinement trials
 as a paired test; tests once; and ends with a written justification.
-**What to expect.** The signal is weak, and the notebook has you measure how weak: the Niño-sign rule's precision sits below
-the base rate, and the logistic rung at the base-rate threshold is not clearly above it. Whether a nonlinear rung does better is the
-next trial the register leaves room for, and the held-out test is the learner's to run once. The limits are stated up front: a
+**What to expect.** The signal is weak, and it is not the one the physical prior predicts: in the committed table, El Niño
+autumns are followed by slightly fewer wet winters than the base rate, moderate La Niña autumns by more, and the strongest La Niña
+by fewer. The Niño-sign rule therefore sits below the base rate, a linear model can only learn a sign (the logistic rung at the
+base-rate threshold is close to the sign rule reversed), and a boosting model, which can bend with the relation, scores above the
+base rate on validation folds. Registering it as a trial and running the held-out test are the learner's to do. The limits are stated up front: a
 model-world study (CESM2 winters scored against CESM2 winters, never against observations, with CESM2's own ENSO and
 teleconnection), on a ~1° grid that smooths the Front Range's orography, in a default season (DJF) that NWS Boulder does not name
 as El Niño's wet season east of the Divide. A result here is not a result for the real Front Range; the Summary names the change
 that would test that.
 
 The notebook stands on its own. It is also the classical-ML half of a longer open-source introduction to machine learning for NSF
-NCAR staff ([ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course)), which keeps the file's
-number; nothing in that repository is needed here.
+NCAR staff ([ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course)); nothing in that repository is needed here.
 
 ### Data
 
