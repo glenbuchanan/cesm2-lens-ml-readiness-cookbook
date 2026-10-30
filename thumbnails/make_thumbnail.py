@@ -5,7 +5,10 @@ The picture is the cookbook's own target: the share of wet winters in each
 tenth of the autumn Niño 3.4 anomaly (training-member decile edges), for the
 training members and the held-out test members, with the forced response
 removed and the wet threshold fitted on training members, as chapters 2 and
-6 compute it (lensml.setup, lensml.wet_by_bin). Minimal text, sized to be
+6 compute it (lensml.setup, lensml.wet_by_bin). The test line carries its
+±2 binomial standard errors and its chi-square p (chapter 6's test line), so
+the card does not show a replicated shape that the test does not support.
+Minimal text, sized to be
 read on a gallery card; the data citation lives in the README and
 notebooks/how-to-cite.md, not on the image.
 
@@ -40,7 +43,20 @@ def main():
     fig.patch.set_facecolor('#FBFAF6')
     ax.set_facecolor('#F5F3ED')  # the house canvas inside the axes
     for label, (line, face, marker, rows) in lines.items():
-        rate = lensml.wet_by_bin(rows, edges)[0]['wet_rate']
+        table, _, p, _ = lensml.wet_by_bin(rows, edges)
+        rate = table['wet_rate']
+        if rows is state.test:
+            test_p = p
+            ax.errorbar(  # ±2 SE: the cookbook's own "beyond 2 SE" line
+                range(1, 11),
+                rate.values,
+                yerr=2 * table['binomial_se'].values,
+                fmt='none',
+                ecolor=line,
+                elinewidth=2,
+                capsize=5,
+                zorder=1,
+            )
         ax.plot(
             range(1, 11),
             rate.values,
@@ -57,7 +73,16 @@ def main():
     )
     ax.axhline(base, color='#13161A', ls='--', lw=2)
     ax.text(10.4, base + 0.005, 'base rate', ha='right', va='bottom')
-    ax.set_ylim(0.25, 0.42)
+    ax.text(  # computed above from the test rows, never typed
+        0.6,
+        0.205,
+        f'test bins ±2 SE; chi-square p = {test_p:.2f}',
+        ha='left',
+        va='bottom',
+        fontsize=15,
+        color='#5B6168',
+    )
+    ax.set_ylim(0.20, 0.48)
     ax.set_xlim(0.5, 10.5)
     ax.set_xticks([1, 10], ['La Niña', 'El Niño'])
     ax.set_ylabel('share of winters wet')

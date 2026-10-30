@@ -1,7 +1,7 @@
 # CESM2 LENS ML Readiness Cookbook
 
-<img src="thumbnails/thumbnail.png" alt="Wet-winter share by tenth of autumn Niño 3.4, training and test members, against the training base rate: the training line lower at both extremes, the test line following it loosely (its bins are
-not distinguishable from chance); the training peak in the third tenth does not repeat" width="300"/>
+<img src="thumbnails/thumbnail.png" alt="Wet-winter share by tenth of autumn Niño 3.4, training and test members, against the training base rate: the training line lower at both extremes, the test line following it loosely, every test bin's ±2 standard-error bar
+reaching the base rate (chi-square p = 0.48); the training peak in the third tenth does not repeat" width="300"/>
 
 [![Launch this cookbook on mybinder.org](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glenbuchanan/cesm2-lens-ml-readiness-cookbook/main?labpath=notebooks)
 
