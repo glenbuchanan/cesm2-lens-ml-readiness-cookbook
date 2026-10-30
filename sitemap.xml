@@ -8,10 +8,25 @@
     <loc>http://localhost:3000/notebooks/how-to-cite</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/applications</loc>
+    <loc>http://localhost:3000/notebooks/find-the-data</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/handbook</loc>
+    <loc>http://localhost:3000/notebooks/target-and-forced-response</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/split-by-member</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/baselines-and-the-ladder</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/refinement-trials</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/test-and-justify</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/notebooks/out-of-period-test</loc>
   </url>
   <url>
     <loc>http://localhost:3000/notebooks/data/readme</loc>
