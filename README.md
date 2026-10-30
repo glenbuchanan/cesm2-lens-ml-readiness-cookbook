@@ -1,6 +1,6 @@
 # CESM2 LENS ML Readiness Cookbook
 
-<img src="thumbnails/thumbnail.png" alt="Wet-winter share by tenth of autumn Niño 3.4, training and test members, against the base rate: both lower at the extremes; the training peak in the third tenth does not repeat" width="300"/>
+<img src="thumbnails/thumbnail.png" alt="Wet-winter share by tenth of autumn Niño 3.4, training and test members, against the training base rate: both lower at the extremes; the training peak in the third tenth does not repeat" width="300"/>
 
 [![Launch this cookbook on mybinder.org](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glenbuchanan/cesm2-lens-ml-readiness-cookbook/main?labpath=notebooks)
 
