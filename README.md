@@ -62,7 +62,7 @@ prints a function's source where a chapter introduces it.
 | [04 Baselines and the ladder](notebooks/04-baselines-and-the-ladder.ipynb) | three rules that fit nothing, then logistic, tree and boosting against the base rate |
 | [05 Refinement trials](notebooks/05-refinement-trials.ipynb) | the register, the corrected paired t-test, the Bonferroni line, a trial of your own |
 | [06 The held-out test, and the justification](notebooks/06-test-and-justify.ipynb) | the test, read against no skill and the cost of a false alarm; the limits |
-| [07 An out-of-period test](notebooks/07-out-of-period-test.ipynb) | the same members' SSP3-7.0 winters, scored once under a protocol fixed before the run |
+| [07 An out-of-period test](notebooks/07-out-of-period-test.ipynb) | the same members' SSP3-7.0 winters, scored once under a protocol fixed before the run (self-attested) |
 
 Chapters 1–6 carry short *Try it* prompts; none needs anything outside this repository. The terms are defined in the
 [glossary](notebooks/glossary.md). Each figure is shown with `show_fig(fig, alt)` from `lensml.py`, which gives the rendered image a
