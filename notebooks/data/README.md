@@ -40,7 +40,7 @@ Shape of the committed copy, each value measured from the file itself (the comma
 - A quick sample (`REBUILD = True` in chapter 1 with a smaller `N_MEMBERS_PER_HALF`) runs the same code: the test hold-out and the fold
   count then follow the data (`N_FOLDS = min(N_FOLDS_MAX, training members)`), and the chapters print the counts they actually used and say
   when the fold re-draws collapse.
-- Source and required citation (NSF NCAR's Data Citation section, which the UCAR Data Terms bind users to): Grover, M., & Banihirwe, A. (2021). NCAR CESM2 Large Ensemble Cloud-Optimized Dataset. NSF NCAR CISL. https://doi.org/10.26024/y48t-q717; and Rodgers et al. 2021, https://doi.org/10.5194/esd-12-1393-2021. UCAR Data Terms of Use (CC BY 4.0).
+- Source and required citation (NSF NCAR's Data Citation section, which the UCAR Data Terms bind users to): Grover, M., & Banihirwe, A. (2021). NCAR CESM2 Large Ensemble Cloud-Optimized Dataset. NSF NCAR CISL. [doi:10.26024/y48t-q717](https://doi.org/10.26024/y48t-q717); and Rodgers et al. 2021, [doi:10.5194/esd-12-1393-2021](https://doi.org/10.5194/esd-12-1393-2021). UCAR Data Terms of Use (CC BY 4.0).
   Access line: Community Earth System Model v2 Large Ensemble (CESM2 LENS) was accessed on 2026-10-20 from https://registry.opendata.aws/ncar-cesm2-lens. (the header's `access=` field)
 
 ## member_winters_ssp370.csv (chapter 7)

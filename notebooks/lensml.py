@@ -82,7 +82,8 @@ RNG_SEED = 0  # declared once; every random_state derives from it
 # it to the new header's date.
 ACCESS_DATE = '2026-10-20'
 
-# Under every LENS figure (the registry page's "How to cite"): the credit,
+# Under every LENS figure (the access line from the registry page's "How to
+# cite"; the two DOIs from the dataset's Data Citation page): the credit,
 # the two DOIs the UCAR Data Terms bind users to, then the access line.
 LENS_TEMPLATE = (
     'Figure © 2026 Glen Buchanan, CC BY 4.0 · Data: CESM2 Large Ensemble '
