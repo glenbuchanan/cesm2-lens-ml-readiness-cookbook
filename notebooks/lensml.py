@@ -85,10 +85,9 @@ ACCESS_DATE = '2026-10-20'
 # Under every LENS figure (the registry page's "How to cite"): the credit,
 # the two DOIs the UCAR Data Terms bind users to, then the access line.
 LENS_TEMPLATE = (
-    '© 2026 Glen Buchanan / CESM2 Large Ensemble Community Project '
-    '(Rodgers et al. 2021, doi:10.5194/esd-12-1393-2021) / NSF NCAR CISL, '
-    'CESM2 LENS on AWS (Grover & Banihirwe 2021, doi:10.26024/y48t-q717) '
-    '· figure CC BY 4.0\n'
+    'Figure © 2026 Glen Buchanan, CC BY 4.0 · Data: CESM2 Large Ensemble '
+    '(Rodgers et al. 2021, doi:10.5194/esd-12-1393-2021; Grover & '
+    'Banihirwe 2021, doi:10.26024/y48t-q717)\n'
     'Community Earth System Model v2 Large Ensemble (CESM2 LENS) was '
     'accessed on ACCESS_DATE from https://registry.opendata.aws/'
     'ncar-cesm2-lens.'

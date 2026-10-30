@@ -1,28 +1,26 @@
 # cesm2-lens-ml-readiness-cookbook — build + execution environment, named <cookbook-name>-dev as Project Pythia asks.
-# The science pins cover every library this notebook imports (conda-forge, pinned);
-# they are the versions the notebook was last executed with. Bump them on purpose and re-run the build,
-# never by letting a resolver drift. mystmd and jupyterlab-myst are the book toolchain the template adds, left unpinned as
-# the template leaves them.
+# Exact pins only on the four libraries that move the printed numbers (numpy, pandas, scipy, scikit-learn), so chapter 7's
+# scored result can be reproduced; everything else floats so upstream changes surface in the build. Why: issue #1.
 name: cesm2-lens-ml-readiness-cookbook-dev
 channels:
   - conda-forge
   - nodefaults
 dependencies:
   - python=3.12
-  - jupyterlab=4.6.4
-  - ipykernel=7.4.0
-  - nbconvert=7.17.2
-  - nbformat=5.11.1
+  - jupyterlab
+  - ipykernel
+  - nbconvert
+  - nbformat
   - numpy=2.5.4
   - pandas=3.0.6
   - scipy=1.18.1
   - scikit-learn=1.9.1
-  - matplotlib=3.11.2
-  - xarray=2026.9.0
-  - zarr=3.4.1
-  - s3fs=2026.9.0
-  - cftime=1.6.5
-  - intake=2.0.9
-  - intake-esm=2025.12.12
+  - matplotlib
+  - xarray
+  - zarr
+  - s3fs
+  - cftime
+  - intake
+  - intake-esm
   - mystmd
   - jupyterlab-myst
