@@ -10,8 +10,9 @@ question — **does the autumn ENSO state predict a wet Front Range winter?** �
 walked along the analysis spine of NSF Unidata's
 [*Supervised Machine Learning Readiness*](https://github.com/Unidata/supervised-ml-readiness), in seven short chapters.
 
-This cookbook is for Earth system scientists, engineers and software staff who are new to machine learning, or who use it
-without training. It assumes Python at the level of the [Xarray tutorial](https://tutorial.xarray.dev/) and no ML. The seven chapters
+This cookbook is for Earth system scientists, engineers and software staff who know Python (at the level of the
+[Xarray tutorial](https://tutorial.xarray.dev/)) and want to evaluate a machine-learning model honestly. Chapters 1–4 are the path for
+someone new to machine learning; chapters 5–7 add the evaluation depth: paired tests, a held-out test, and an out-of-period test. The seven chapters
 take about 1 hour 45 minutes, and each runs on its own in under a minute from a committed table.
 
 ## Motivation
@@ -70,12 +71,12 @@ descriptive alt text; `thumbnails/make_thumbnail.py` redraws the gallery thumbna
 ## What it finds
 
 The signal is weak. The straight-line relation between autumn Niño 3.4 and a wet winter is indistinguishable from zero. The final model,
-gradient boosting at the base-rate threshold, shows a small precision edge on the held-out members, but **that test is not blind**: the
-same 20 members were scored during development. Chapter 7 tests the edge on those members' untouched SSP3-7.0 winters (2016–2100), under
+gradient boosting at the base-rate threshold, shows a small precision edge on the held-out members, but **that test is not blind**: the same 20 members were scored during development, with four models, and the final model was registered after those
+scores had been seen. Chapter 7 tests the edge on those members' untouched SSP3-7.0 winters (2016–2100), under
 a protocol written before that data was read (self-attested; it ships as `notebooks/data/ssp370-test-protocol.md`). **The edge is not
 confirmed:** it does not replicate under the rule fixed before the run, but the test was small. A true edge of chapter 6's size would
-have cleared it only about 42% of the time (chapter 7 prints this), so the result gives no support for a briefing calling the winter
-statistically wetter, and does not rule such an edge out. Chapter 6 states the limits: a
+have cleared it only about 42% of the time (chapter 7 prints this), so the result gives no support for such a signal in CESM2, and does not
+rule such an edge out. Chapter 6 states the limits: a
 model-world study, on a ~1° grid, of total precipitation, in DJF, for a box that crosses the Divide.
 
 As optional further material, [ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course) keeps the same data
