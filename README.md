@@ -75,7 +75,9 @@ gradient boosting at the base-rate threshold, shows a small precision edge on th
 scores had been seen. Chapter 7 tests the edge on those members' untouched SSP3-7.0 winters (2016–2100), under
 a protocol written before that data was read (self-attested; it ships as `notebooks/data/ssp370-test-protocol.md`). **The edge is not
 confirmed:** it does not replicate under the rule fixed before the run, but the test was small. A true edge of chapter 6's size would
-have cleared it only about 42% of the time (chapter 7 prints this), so the result neither confirms nor rules out an edge of that size in CESM2
+have cleared it only about 42% of the time (chapter 7 prints this), so the result neither confirms nor rules out an edge of that size in CESM2's
+SSP3-7.0 winters
+
 (the interval holds both 0 and chapter 6's +0.018). Chapter 6 states the limits: a
 model-world study, on a ~1° grid, of total precipitation, in DJF, for a box that crosses the Divide.
 
@@ -108,7 +110,7 @@ You can either run the notebooks in the Cookbook using [Binder](https://binder.p
 ### Running on Binder
 
 Until this cookbook is transferred to the ProjectPythia organisation, use `https://mybinder.org` wherever the steps below say
-`https://binder.projectpythia.org`; the Pythia Binder launches only that organisation's repositories.
+`https://binder.projectpythia.org`; the Pythia Binder refused to launch this repository when it was tried.
 
 The simplest way to interact with a Jupyter Notebook is through
 [Binder](https://binder.projectpythia.org/), which enables "one click"
@@ -162,7 +164,8 @@ the chapters read the AWS copy of the ensemble, so no GLADE path is needed.
 ## Licence, provenance and review status
 
 - Code is Apache-2.0; non-code content is CC BY 4.0 (the Project Pythia split). Data are under the UCAR Data Terms of Use (CC BY 4.0).
-- Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR or NSF Unidata.
+- Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR or NSF Unidata. The NSF grant line in the
+  site footer is Project Pythia's acknowledgement of its own funding, shared by every Pythia cookbook; this cookbook received none.
 - Drafting: Drafted with AI assistance (Anthropic's Claude) from cited sources, under the author's direction, and reviewed by the author in several full read-throughs. Text and code were checked against those sources and the notebooks' own outputs by the author's automated checks (not in this repository) and by separate AI review sessions (also Claude); no human subject-matter expert has reviewed it yet.
 - How it was checked: each chapter's *Resources and references* table lists its sources; the publish workflow re-executes every
   chapter on every build. The author's own checks (not in this repository) compared printed numbers with the prose, and AI review
