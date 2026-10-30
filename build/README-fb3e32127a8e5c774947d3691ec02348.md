@@ -12,7 +12,7 @@ walked along the analysis spine of NSF Unidata's
 
 This cookbook is for Earth system scientists, engineers and software staff who are new to machine learning, or who use it
 without training. It assumes Python at the level of the [Xarray tutorial](https://tutorial.xarray.dev/) and no ML. The seven chapters
-take about 2 hours 35 minutes, and each runs on its own in under a minute from a committed table.
+take about 1 hour 45 minutes, and each runs on its own in under a minute from a committed table.
 
 ## Motivation
 
@@ -64,9 +64,8 @@ prints a function's source where a chapter introduces it.
 | [07 An out-of-period test](notebooks/07-out-of-period-test.ipynb) | the same members' SSP3-7.0 winters, scored once under a protocol fixed before the run |
 
 Chapters 1–6 carry short *Try it* prompts; none needs anything outside this repository. The terms are defined in the
-[glossary](notebooks/glossary.md). Two support files sit beside the chapters: `cookbook-render.mjs`, a MyST plugin that copies each
-figure cell's `metadata.alt` into the rendered image's alt text and fails the build if one is missing, and
-`thumbnails/make_thumbnail.py`, which redraws the gallery thumbnail from the committed table.
+[glossary](notebooks/glossary.md). Each figure is shown with `show_fig(fig, alt)` from `lensml.py`, which gives the rendered image a
+descriptive alt text; `thumbnails/make_thumbnail.py` redraws the gallery thumbnail from the committed table.
 
 ## What it finds
 
