@@ -21,7 +21,9 @@ The existing [CESM LENS on AWS Cookbook](https://projectpythia.org/cesm-lens-aws
 40-member CESM1 Large Ensemble with Xarray and Dask; the [scikit-learn Argo](https://projectpythia.org/sklearn-argo-cookbook/),
 [Landsat ML](https://projectpythia.org/landsat-ml-cookbook/) and [xbatcher ML](https://projectpythia.org/xbatcher-ML-1-cookbook/)
 cookbooks apply machine learning to ocean profiles, satellite imagery and CNN training batches, and the
-[EO Data Science](https://projectpythia.org/eo-datascience-cookbook/) cookbook includes a supervised classifier on Sentinel-2 imagery. None yet walks a newcomer through
+[EO Data Science](https://projectpythia.org/eo-datascience-cookbook/) cookbook includes a supervised classifier on Sentinel-2 imagery. The closest neighbour, the
+[Precipitation ML Cookbook](https://projectpythia.org/ptype-ml-cookbook/), is a short scikit-learn precipitation-type classifier that accompanies
+Unidata's CyberTraining. None yet walks a newcomer through
 a supervised classifier on a **large ensemble**, where the members themselves are the unit the split has to respect. This cookbook teaches the whole spine on that data and changes
 exactly one of Unidata's steps on purpose: the split is **by ensemble member**. Two reasons hold it there. The question is about
 members the model has never seen, so the score has to come from unseen members. And the forced-response curve and the wet
