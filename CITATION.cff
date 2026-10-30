@@ -7,4 +7,4 @@ authors:
   - name: "CESM2 LENS ML Readiness Cookbook contributors"
     website: "https://github.com/glenbuchanan/cesm2-lens-ml-readiness-cookbook/graphs/contributors"
 title: "CESM2 LENS ML Readiness Cookbook"
-abstract: "A supervised classification on NSF NCAR's CESM2 Large Ensemble (AWS Open Data): does the autumn ENSO state predict a wet Front Range winter? The notebook follows NSF Unidata's Supervised Machine Learning Readiness spine, splits by ensemble member, and measures a weak signal honestly. Drafted with AI assistance (Anthropic's Claude) under the author's direction."
+abstract: "Seven chapters on NSF NCAR's CESM2 Large Ensemble (AWS Open Data): does the autumn ENSO state predict a wet Front Range winter? A supervised classifier built along NSF Unidata's Supervised Machine Learning Readiness spine, split by ensemble member, with refinement trials compared by a corrected paired test, one held-out test, and an out-of-period test on SSP3-7.0 winters under a protocol fixed before the run (self-attested), in which the edge does not replicate. Drafted with AI assistance (Anthropic's Claude) under the author's direction."

@@ -14,12 +14,15 @@ project:
     - title: Preamble
       children:
         - file: notebooks/how-to-cite.md
-    - title: The notebook
+    - title: Chapters
       children:
-        - file: notebooks/02_applications.ipynb
-    - title: Handbook
-      children:
-        - file: notebooks/handbook.md
+        - file: notebooks/01-find-the-data.ipynb
+        - file: notebooks/02-target-and-forced-response.ipynb
+        - file: notebooks/03-split-by-member.ipynb
+        - file: notebooks/04-baselines-and-the-ladder.ipynb
+        - file: notebooks/05-refinement-trials.ipynb
+        - file: notebooks/06-test-and-justify.ipynb
+        - file: notebooks/07-out-of-period-test.ipynb
     - title: Data
       children:
         - file: notebooks/data/README.md

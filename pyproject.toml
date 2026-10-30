@@ -1,0 +1,5 @@
+# Formatter settings only, so the template's pre-commit hooks agree with each other: black keeps the
+# single quotes double-quote-string-fixer writes, and wraps at flake8's default 79 columns.
+[tool.black]
+line-length = 79
+skip-string-normalization = true
