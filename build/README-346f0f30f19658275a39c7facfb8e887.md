@@ -1,6 +1,7 @@
 # CESM2 LENS ML Readiness Cookbook
 
-<img src="thumbnails/thumbnail.png" alt="Wet-winter share by tenth of autumn Niño 3.4, training and test members, against the training base rate: both lower at the extremes; the training peak in the third tenth does not repeat" width="300"/>
+<img src="thumbnails/thumbnail.png" alt="Wet-winter share by tenth of autumn Niño 3.4, training and test members, against the training base rate: the training line lower at both extremes, the test line following it loosely (its bins are
+not distinguishable from chance); the training peak in the third tenth does not repeat" width="300"/>
 
 [![Launch this cookbook on mybinder.org](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glenbuchanan/cesm2-lens-ml-readiness-cookbook/main?labpath=notebooks)
 
@@ -19,7 +20,7 @@ take about 1 hour 45 minutes, and each runs on its own in under a minute from a 
 
 The closest neighbour, in the ProjectPythia organisation though not yet listed in the gallery, is the [Precipitation Machine Learning Cookbook](https://projectpythia.org/ptype-ml-cookbook/), a short
 scikit-learn introduction (a regression of dew point on temperature, pressure and wind) that accompanies Unidata's CyberTraining. The
-[CESM LENS on AWS Cookbook](https://projectpythia.org/cesm-lens-aws-cookbook/) covers reading the CESM1 Large Ensemble, and the
+[CESM LENS on AWS Cookbook](https://projectpythia.org/cesm-lens-aws-cookbook/) covers reading and plotting the CESM1 Large Ensemble (reproducing the key figures of Kay et al. 2015), and the
 [scikit-learn Argo](https://projectpythia.org/sklearn-argo-cookbook/) (also not yet listed), [Landsat ML](https://projectpythia.org/landsat-ml-cookbook/),
 [xbatcher ML](https://projectpythia.org/xbatcher-ML-1-cookbook/) and [EO Data Science](https://projectpythia.org/eo-datascience-cookbook/)
 cookbooks apply machine learning to other data. None yet walks a newcomer through a supervised classifier on a **large ensemble**,
@@ -108,7 +109,7 @@ You can either run the notebooks in the Cookbook using [Binder](https://binder.p
 ### Running on Binder
 
 Until this cookbook is transferred to the ProjectPythia organisation, use `https://mybinder.org` wherever the steps below say
-`https://binder.projectpythia.org`; the Pythia Binder refused to launch this repository when it was tried.
+`https://binder.projectpythia.org`; the Pythia Binder refused to launch this repository when it was tried on 2026-10-30.
 
 The simplest way to interact with a Jupyter Notebook is through
 [Binder](https://binder.projectpythia.org/), which enables "one click"
