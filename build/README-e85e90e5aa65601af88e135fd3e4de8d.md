@@ -34,8 +34,8 @@ Shape of the committed copy, each value measured from the file itself (the comma
   the member and winter counts it actually read). It was produced by a full rebuild — a background job: the one full derivation took 33 min
   on a fast link (2026-10-20); on home broadband expect an hour or more (chapter 1's `chunking` line computes the volume from the store:
   four 600-month chunks of about 133 MB, read whole, ≈ 531 MB per member-variable, three variables, ≈ 159 GB for 100 members) — and the
-  access date was written into the header's `access=` field. **A rebuild is a new access:** `load_cache(rebuild=True)` stamps the day it
-  reads S3 into `ACCESS_DATE`, the header and every figure's citation; on every other read the header's `access=` is asserted equal to
+  access date was written into the header's `access=` field. **A rebuild is a new access:** set `ACCESS_DATE` in `lensml.py` to the day of the rebuild first: `load_cache(rebuild=True)` writes it into the
+  header and every figure's citation; on every other read the header's `access=` is asserted equal to
   `ACCESS_DATE` in `lensml.py`, so the two cannot drift.
 - A quick sample (`REBUILD = True` in chapter 1 with a smaller `N_MEMBERS_PER_HALF`) runs the same code: the test hold-out and the fold
   count then follow the data (`N_FOLDS = min(N_FOLDS_MAX, training members)`), and the chapters print the counts they actually used and say
@@ -52,5 +52,6 @@ the header contains `FUTURE_RECORD` (experiment, season, window, both boxes, aut
 `FUTURE_ACCESS_DATE` in `lensml.py`. `ssp370-test-protocol.md`, beside it, is the protocol chapter 7 follows, verbatim.
 Chapter 7 is the only reader, under a protocol written, by the author's account, before the file was derived (self-attested; no external timestamp).
 The protocol is kept exactly as written, so two of its phrases predate the published text: its title and chapter 7's printed rule say
-"pre-registered", meaning fixed in advance by the author, not lodged with a registry; and its "seven limits" refer to a draft of chapter 6 that day, not in the repository history (chapter 6 now lists eight). Its first line records the author's choice of a fresh test. Chapter 7 compares the file's SHA-256 with the hash committed with the test, so any edit, even a typo fix, shows there as
+"pre-registered", meaning fixed in advance by the author, not lodged with a registry; and its "seven limits" refer to a draft of chapter 6 that day, not in the repository history (chapter 6 now lists eight). Its second line records the author's choice of a fresh test. Chapter 7 compares the file's SHA-256 with its hash as committed
+with the test (851d900), so any edit, even a typo fix, shows there as
 "differs"; an amendment belongs in a new, dated file beside it.
