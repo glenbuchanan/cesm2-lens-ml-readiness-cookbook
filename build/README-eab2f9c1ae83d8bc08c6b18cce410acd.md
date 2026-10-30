@@ -94,8 +94,8 @@ the cookbook's own code and committed, so no chapter needs the heavy S3 read; ch
 Community Earth System Model v2 Large Ensemble (CESM2 LENS) was accessed on 2026-10-20 (historical) and 2026-10-29 (SSP3-7.0) from
 https://registry.opendata.aws/ncar-cesm2-lens. NSF NCAR asks that both the dataset and the paper be cited:
 
-- Grover, M., & Banihirwe, A. (2021). *NCAR CESM2 Large Ensemble Cloud-Optimized Dataset*. NSF NCAR CISL. [doi:10.26024/y48t-q717](https://doi.org/10.26024/y48t-q717)
-- Rodgers, K. B. et al. (2021). Ubiquity of human-induced changes in climate variability. *Earth System Dynamics* 12, 1393–1411. [doi:10.5194/esd-12-1393-2021](https://doi.org/10.5194/esd-12-1393-2021)
+- Grover, M., & Banihirwe, A. (2021). *NCAR CESM2 Large Ensemble Cloud-Optimized Dataset*. NSF NCAR CISL. doi:10.26024/y48t-q717
+- Rodgers, K. B. et al. (2021). Ubiquity of human-induced changes in climate variability. *Earth System Dynamics* 12, 1393–1411. doi:10.5194/esd-12-1393-2021
 
 Results based on the CESM2 Large Ensemble acknowledge the CESM2 Large Ensemble Community Project and supercomputing resources
 provided by the IBS Center for Climate Physics in South Korea. The dataset citation and access line sit under every chapter figure that draws CESM2 LENS data (not
