@@ -67,7 +67,7 @@ source where a chapter introduces a function.
 | [06 The held-out test, and the justification](notebooks/06-test-and-justify.ipynb) | the test of the register's final incumbent (the published page runs it), read against no skill and the cost of a false alarm; the justification; the result's shape; the limits |
 | [07 An out-of-period test, under a protocol fixed before the run](notebooks/07-out-of-period-test.ipynb) | the same members' SSP3-7.0 winters (2016–2100), read only after a protocol (self-attested; no external timestamp) fixed the model, comparators, outcomes and decision rule; transforms refitted on training members only; one scored run |
 
-Each chapter carries short *Try it* prompts in place; none needs anything outside this repository. Two support files sit beside the
+Chapters 1–6 carry short *Try it* prompts in place; none needs anything outside this repository. Two support files sit beside the
 chapters: `cookbook-render.mjs`, a MyST plugin that copies each figure cell's `metadata.alt` into the rendered image's alt text (without
 it the page would read "Figure size 990x418"), and `thumbnails/make_thumbnail.py`, which redraws the gallery thumbnail from the committed
 cache with the same transforms the chapters use.
