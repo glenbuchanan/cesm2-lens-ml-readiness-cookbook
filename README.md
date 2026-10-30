@@ -2,7 +2,7 @@
 
 <img src="thumbnails/thumbnail.png" alt="Wet-winter share by tenth of autumn Niño 3.4, training and test members, against the base rate: both lower at the extremes; the training peak in the third tenth does not repeat" width="300"/>
 
-[![Launch this cookbook on the Project Pythia Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/glenbuchanan/cesm2-lens-ml-readiness-cookbook/main?labpath=notebooks)
+[![Launch this cookbook on mybinder.org](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glenbuchanan/cesm2-lens-ml-readiness-cookbook/main?labpath=notebooks)
 
 This Project Pythia Cookbook covers _supervised machine learning readiness on a climate-model large ensemble_: one classification
 question — **does the autumn ENSO state predict a wet Front Range winter?** — answered on NSF NCAR's own
@@ -16,10 +16,10 @@ take about 2 hours 35 minutes, and each runs on its own in under a minute from a
 
 ## Motivation
 
-The closest neighbour in the gallery, the [Precipitation ML Cookbook](https://projectpythia.org/ptype-ml-cookbook/), is a short
-scikit-learn precipitation-type classifier that accompanies Unidata's CyberTraining. The
+The closest neighbour, in the ProjectPythia organisation though not yet listed in the gallery, is the [Precipitation Machine Learning Cookbook](https://projectpythia.org/ptype-ml-cookbook/), a short
+scikit-learn introduction (regression on surface observations) that accompanies Unidata's CyberTraining. The
 [CESM LENS on AWS Cookbook](https://projectpythia.org/cesm-lens-aws-cookbook/) covers reading the CESM1 Large Ensemble, and the
-[scikit-learn Argo](https://projectpythia.org/sklearn-argo-cookbook/), [Landsat ML](https://projectpythia.org/landsat-ml-cookbook/),
+[scikit-learn Argo](https://projectpythia.org/sklearn-argo-cookbook/) (also not yet listed), [Landsat ML](https://projectpythia.org/landsat-ml-cookbook/),
 [xbatcher ML](https://projectpythia.org/xbatcher-ML-1-cookbook/) and [EO Data Science](https://projectpythia.org/eo-datascience-cookbook/)
 cookbooks apply machine learning to other data. None yet walks a newcomer through a supervised classifier on a **large ensemble**,
 where the members themselves are the unit the split has to respect.
@@ -73,8 +73,10 @@ figure cell's `metadata.alt` into the rendered image's alt text and fails the bu
 The signal is weak. The straight-line relation between autumn Niño 3.4 and a wet winter is indistinguishable from zero. The final model,
 gradient boosting at the base-rate threshold, shows a small precision edge on the held-out members, but **that test is not blind**: the
 same 20 members were scored during development. Chapter 7 tests the edge on those members' untouched SSP3-7.0 winters (2016–2100), under
-a protocol written before that data was read (self-attested; it ships as `notebooks/data/ssp370-test-protocol.md`). **The edge does not
-replicate.** The test cannot rule out a small edge, but it gives no support for leaning an outlook wet. Chapter 6 states the limits: a
+a protocol written before that data was read (self-attested; it ships as `notebooks/data/ssp370-test-protocol.md`). **The edge is not
+confirmed:** it does not replicate under the rule fixed before the run, but the test was small. A true edge of chapter 6's size would
+have cleared it only about 42% of the time (chapter 7 prints this), so the result gives no support for a briefing calling the winter
+statistically wetter, and does not rule such an edge out. Chapter 6 states the limits: a
 model-world study, on a ~1° grid, of total precipitation, in DJF, for a box that crosses the Divide.
 
 As optional further material, [ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course) keeps the same data
@@ -103,6 +105,9 @@ provided by the IBS Center for Climate Physics in South Korea. The same line sit
 You can either run the notebooks in the Cookbook using [Binder](https://binder.projectpythia.org/) or on your local machine.
 
 ### Running on Binder
+
+Until this cookbook is transferred to the ProjectPythia organisation, use `https://mybinder.org` wherever the steps below say
+`https://binder.projectpythia.org`; the Pythia Binder launches only that organisation's repositories.
 
 The simplest way to interact with a Jupyter Notebook is through
 [Binder](https://binder.projectpythia.org/), which enables "one click"
@@ -159,7 +164,7 @@ the chapters read the AWS copy of the ensemble, so no GLADE path is needed.
 - Nothing in this cookbook is export-controlled: open data, open code.
 - Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR or NSF Unidata; it is offered to the
   Project Pythia community for its own review.
-- Drafting: Drafted with AI assistance (Anthropic's Claude) from cited sources, under the author's direction, and reviewed by the author in several full read-throughs. Text and code were checked against those sources and the notebooks' own outputs by automated tests and by separate AI review sessions (also Claude); no human subject-matter expert has reviewed it yet.
-- How it was checked: each chapter's *Resources and references* table lists its sources; automated tests execute every chapter
-  from the committed table and check its printed numbers; separate AI review sessions read the cookbook, and a finding was acted on only
-  after it was reproduced.
+- Drafting: Drafted with AI assistance (Anthropic's Claude) from cited sources, under the author's direction, and reviewed by the author in several full read-throughs. Text and code were checked against those sources and the notebooks' own outputs by the author's automated checks (not in this repository) and by separate AI review sessions (also Claude); no human subject-matter expert has reviewed it yet.
+- How it was checked: each chapter's *Resources and references* table lists its sources; the publish workflow re-executes every
+  chapter on every build. The author's own checks (not in this repository) compared printed numbers with the prose, and AI review
+  findings were acted on only once reproduced.

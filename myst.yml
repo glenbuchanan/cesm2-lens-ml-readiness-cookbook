@@ -29,7 +29,7 @@ project:
         - file: notebooks/data/README.md
   jupyter:
       binder:
-        url: https://binder.projectpythia.org
+        url: https://mybinder.org
         repo: glenbuchanan/cesm2-lens-ml-readiness-cookbook
 site:
   options:
