@@ -70,7 +70,7 @@ descriptive alt text; `thumbnails/make_thumbnail.py` redraws the gallery thumbna
 
 ## What it finds
 
-The signal is weak. The straight-line relation between autumn Niño 3.4 and a wet winter is indistinguishable from zero. The final model,
+The signal is weak. The straight-line relation between autumn Niño 3.4 and winter precipitation is indistinguishable from zero. The final model,
 gradient boosting at the base-rate threshold, shows a small precision edge on the held-out members, but **that test is not blind**: the same 20 members were scored during development, with four models, and the final model was registered after those
 scores had been seen. Chapter 7 tests the edge on those members' untouched SSP3-7.0 winters (2016–2100), under
 a protocol written before that data was read (self-attested; it ships as `notebooks/data/ssp370-test-protocol.md`). **The edge is not
@@ -98,7 +98,8 @@ https://registry.opendata.aws/ncar-cesm2-lens. NSF NCAR asks that both the datas
 - Rodgers, K. B. et al. (2021). Ubiquity of human-induced changes in climate variability. *Earth System Dynamics* 12, 1393–1411. https://doi.org/10.5194/esd-12-1393-2021
 
 Results based on the CESM2 Large Ensemble acknowledge the CESM2 Large Ensemble Community Project and supercomputing resources
-provided by the IBS Center for Climate Physics in South Korea. The dataset citation and access line sit under every figure that draws CESM2 LENS data.
+provided by the IBS Center for Climate Physics in South Korea. The dataset citation and access line sit under every chapter figure that draws CESM2 LENS data (not
+the gallery thumbnail).
 
 ## Running the Notebooks
 
