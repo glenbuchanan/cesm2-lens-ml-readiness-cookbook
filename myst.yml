@@ -8,7 +8,6 @@ project:
     - name: Glen Buchanan
   copyright: '2026'
   plugins:
-    - a11y-headings.mjs
     - cookbook-render.mjs
   toc:
     - file: README.md
@@ -18,10 +17,9 @@ project:
     - title: The notebook
       children:
         - file: notebooks/02_applications.ipynb
-    - title: Handbook and rubric
+    - title: Handbook
       children:
         - file: notebooks/handbook.md
-        - file: notebooks/rubric.md
     - title: Data
       children:
         - file: notebooks/data/README.md
@@ -30,12 +28,5 @@ project:
         url: https://binder.projectpythia.org
         repo: glenbuchanan/cesm2-lens-ml-readiness-cookbook
 site:
-  parts:
-    footer: |
-      Built with Project Pythia's cookbook template. Project Pythia is supported by NSF Grant Nos. 2026863 and 2026899; NSF NCAR,
-      NSF Unidata and the University at Albany are its sponsors, named here in place of their logos. This cookbook is self-funded
-      and has not been reviewed or sponsored by NSF NCAR or NSF Unidata; any opinions, findings, conclusions or
-      recommendations expressed in it are the author's.
   options:
     logo_alt: Project Pythia logo (site home)
-    style: a11y.css
