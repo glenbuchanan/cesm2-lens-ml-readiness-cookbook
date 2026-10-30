@@ -14,9 +14,6 @@
     <loc>http://localhost:3000/notebooks/handbook</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/notebooks/rubric</loc>
-  </url>
-  <url>
     <loc>http://localhost:3000/notebooks/data/readme</loc>
   </url>
 </urlset>

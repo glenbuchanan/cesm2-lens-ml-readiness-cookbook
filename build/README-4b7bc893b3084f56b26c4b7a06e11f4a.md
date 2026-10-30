@@ -55,13 +55,12 @@ authored by NSF Unidata with Metropolitan State University of Denver. One cell a
 
 ## Structure
 
-This cookbook is one notebook with two companion documents. What each file is for, and what judges it:
+This cookbook is one notebook with a companion handbook. What each file is for, and what judges it:
 
 | File | What you do with it | What scores it |
 |---|---|---|
 | `notebooks/02_applications.ipynb` | run the spine end to end: frame → data → split → train → validate → refine → test → justify; eleven numbered exercises point into the handbook | the build (`myst build --execute --html --strict`) and your own printed lines |
-| `notebooks/handbook.md` | record one entry per exercise with the evidence pasted (a table, a printed line, a figure); no evidence pasted scores *Not yet* | `notebooks/rubric.md`, first by you, then by a trainer |
-| `notebooks/rubric.md` | score each entry at three levels and roll the levels up per objective | the trainer's column in the handbook's self-score table |
+| `notebooks/handbook.md` | record one entry per exercise with the evidence pasted (a table, a printed line, a figure); no evidence pasted scores *Not yet* | the Rubric, which ships with the full course ([`course/rubric.md`](https://github.com/glenbuchanan/ncar-ml-readiness-course/blob/main/course/rubric.md)), first by you, then by a trainer |
 | `notebooks/data/member_winters.csv` | the committed member-winter table the notebook reads instead of S3 | the notebook's own cache-header assertion |
 
 ### The notebook
@@ -165,4 +164,11 @@ the notebook reads the AWS copy of the ensemble, so no GLADE path is needed.
 - Nothing in this cookbook is export-controlled: open data, open code.
 - Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR or NSF Unidata; it is offered to the
   Project Pythia community for its own review.
-- Drafting: Drafted with AI assistance (Anthropic's Claude) from cited sources, under the author's direction; the author's line-by-line edit and a subject-matter review are still to come.
+- Drafting: Drafted with AI assistance (Anthropic's Claude) from cited sources, under the author's direction, and reviewed by the author in several full read-throughs. Text and code were checked against those sources and the notebooks' own outputs by automated tests and independent AI reviewers; no human subject-matter expert has reviewed it yet.
+- How it was checked (as of 2026-10-29): the notebook and handbook rest on 18 source records in the author's research
+  library, each with its licence and retrieval date, 15 with the exact passages quoted; every prose paragraph of 40 words or
+  more must cite one. Automated checks, each tested by planting an error it must catch, gate template conformance, sources,
+  links, licences, accessibility and a full strict build. Independent AI reviewers read it as a Project Pythia advocate and as
+  a skeptical Earth system scientist over five rounds; a finding was acted on only after it was reproduced, by re-running the
+  code or fetching the source. They caught real errors, among them an overstated result that is now corrected. A human
+  subject-matter review has not happened yet and is welcome.
