@@ -7,8 +7,6 @@ project:
   authors:
     - name: Glen Buchanan
   copyright: '2026'
-  plugins:
-    - cookbook-render.mjs
   toc:
     - file: README.md
     - title: Preamble

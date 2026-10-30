@@ -112,7 +112,9 @@ AUTUMN_MONTHS = [9, 10, 11]  # SON of the year before the winter
 
 # --- the window and the forced response -----------------------------------
 # Rodgers et al. 2021 §2.2: members "should not be considered ...
-# independent" for decades after 1850, so the window starts late.
+# independent" soon after 1850, and Rodgers analyse internal variability
+# "after 1960". The 1900 start is this cookbook's choice; chapter 3's
+# sibling check is what supports it, not Rodgers.
 WINDOW = (1900, 2014)
 FORCED_DEG = 3  # degree of the forced-response polynomial in year
 
@@ -160,6 +162,18 @@ def credit_own(fig, what):
         ha='left',
         va='top',
     )
+
+
+def show_fig(fig, alt):
+    """Display fig as the inline backend would, with `alt` as its text/plain:
+    the book theme renders an image output's text/plain as the <img alt>, and
+    a bare matplotlib output would carry "<Figure size …>" there instead."""
+    from IPython.core.pylabtools import print_figure
+    from IPython.display import display
+
+    png = print_figure(fig, 'png')
+    plt.close(fig)
+    display({'image/png': png, 'text/plain': alt}, raw=True)
 
 
 # ==========================================================================

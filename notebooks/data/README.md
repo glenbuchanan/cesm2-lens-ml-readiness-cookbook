@@ -53,4 +53,5 @@ the header contains `FUTURE_RECORD` (experiment, season, window, both boxes, aut
 Chapter 7 is the only reader, under a protocol written, by the author's account, before the file was derived (self-attested; no external timestamp).
 The protocol is kept exactly as written, so two of its phrases predate the published text: its title and chapter 7's printed rule say
 "pre-registered", meaning fixed in advance by the author, not lodged with a registry; and its "seven limits" are chapter 6's limits as
-they stood that day (chapter 6 now lists an eighth, the not-blind test). Its first line records the author's choice of a fresh test.
+they stood that day (chapter 6 now lists an eighth, the not-blind test). Its first line records the author's choice of a fresh test. Because chapter 7 asserts the file's SHA-256, the
+file cannot be edited, even for a typo; an amendment would be a new, dated file beside it.
