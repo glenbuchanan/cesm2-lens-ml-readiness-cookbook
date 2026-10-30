@@ -33,7 +33,7 @@ Shape of the committed copy, each value measured from the file itself (the comma
 - The committed copy is the **full table**: 50 members per half, every member of both halves (the header records it, and chapter 1 prints
   the member and winter counts it actually read). It was produced by a full rebuild — a background job: the one full derivation took 33 min
   on a fast link (2026-10-20); on home broadband expect an hour or more (chapter 1's `chunking` line computes the volume from the store:
-  four 600-month chunks of about 133 MB, read whole, ≈ 530 MB per member-variable, three variables, ≈ 160 GB for 100 members) — and the
+  four 600-month chunks of about 133 MB, read whole, ≈ 531 MB per member-variable, three variables, ≈ 159 GB for 100 members) — and the
   access date was written into the header's `access=` field. **A rebuild is a new access:** `load_cache(rebuild=True)` stamps the day it
   reads S3 into `ACCESS_DATE`, the header and every figure's citation; on every other read the header's `access=` is asserted equal to
   `ACCESS_DATE` in `lensml.py`, so the two cannot drift.
@@ -50,4 +50,4 @@ historical store), derived from the ssp370 stores by `derive_future_cache` in `.
 Its header records the experiment, window, parameters, member count and access date (2026-10-29); `load_future_cache` asserts that
 the header contains `FUTURE_RECORD` (experiment, season, window, both boxes, autumn months) and that its `access=` date equals
 `FUTURE_ACCESS_DATE` in `lensml.py`. `ssp370-test-protocol.md`, beside it, is the protocol chapter 7 follows, verbatim.
-Chapter 7 is the only reader, under a protocol written before the file was derived.
+Chapter 7 is the only reader, under a protocol written, by the author's account, before the file was derived (self-attested; no external timestamp).
