@@ -14,6 +14,7 @@ project:
     - title: Preamble
       children:
         - file: notebooks/how-to-cite.md
+        - file: notebooks/glossary.md
     - title: Chapters
       children:
         - file: notebooks/01-find-the-data.ipynb

@@ -31,14 +31,14 @@ def main():
     edges = lensml.decile_edges(state.train)  # training edges for both
     lines = {
         'training members': ('#8F7022', '#C9A23A', 'o', state.train),
-        'test members': ('#4B5563', '#FBFAF6', 's', state.test),
+        'test members': ('#5B6168', '#FBFAF6', 's', state.test),
     }
     base = state.train['wet'].mean()
 
     plt.rcParams.update({'font.size': 22})
     fig, ax = plt.subplots(figsize=(8, 6))
     fig.patch.set_facecolor('#FBFAF6')
-    ax.set_facecolor('#FBFAF6')
+    ax.set_facecolor('#F5F3ED')  # the house canvas inside the axes
     for label, (line, face, marker, rows) in lines.items():
         rate = lensml.wet_by_bin(rows, edges)[0]['wet_rate']
         ax.plot(
@@ -51,6 +51,10 @@ def main():
             markerfacecolor=face,
             label=label,
         )
+    train_rate = lensml.wet_by_bin(state.train, edges)[0]['wet_rate']
+    ax.fill_between(  # the training curve's departure from no skill
+        range(1, 11), train_rate.values, base, color='#EAD27E', lw=0, zorder=0
+    )
     ax.axhline(base, color='#13161A', ls='--', lw=2)
     ax.text(10.4, base + 0.005, 'base rate', ha='right', va='bottom')
     ax.set_ylim(0.25, 0.42)
