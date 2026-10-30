@@ -33,7 +33,7 @@ Shape of the committed copy, each value measured from the file itself (the comma
 - The committed copy is the **full table**: 50 members per half, every member of both halves (the header records it, and chapter 1 prints
   the member and winter counts it actually read). It was produced by a full rebuild — a background job: the one full derivation took 33 min
   on a fast link (2026-10-20); on home broadband expect an hour or more (chapter 1's `chunking` line computes the volume from the store:
-  four 600-month chunks of about 133 MB, read whole, ≈ 531 MB per member-variable, three variables, ≈ 159 GB for 100 members) — and the
+  four 600-month chunks of about 133 MB, read whole, ≈ 531 MB per member-variable, three variables, ≈ 159 GB uncompressed for 100 members; the transfer is smaller) — and the
   access date was written into the header's `access=` field. **A rebuild is a new access:** set `ACCESS_DATE` in `lensml.py` to the day of the rebuild first: `load_cache(rebuild=True)` writes it into the
   header and every figure's citation; on every other read the header's `access=` is asserted equal to
   `ACCESS_DATE` in `lensml.py`, so the two cannot drift.
