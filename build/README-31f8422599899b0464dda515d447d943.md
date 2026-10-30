@@ -75,8 +75,8 @@ gradient boosting at the base-rate threshold, shows a small precision edge on th
 scores had been seen. Chapter 7 tests the edge on those members' untouched SSP3-7.0 winters (2016–2100), under
 a protocol written before that data was read (self-attested; it ships as `notebooks/data/ssp370-test-protocol.md`). **The edge is not
 confirmed:** it does not replicate under the rule fixed before the run, but the test was small. A true edge of chapter 6's size would
-have cleared it only about 42% of the time (chapter 7 prints this), so the result gives no support for such a signal in CESM2, and does not
-rule such an edge out. Chapter 6 states the limits: a
+have cleared it only about 42% of the time (chapter 7 prints this), so the result neither confirms nor rules out an edge of that size in CESM2
+(the interval holds both 0 and chapter 6's +0.018). Chapter 6 states the limits: a
 model-world study, on a ~1° grid, of total precipitation, in DJF, for a box that crosses the Divide.
 
 As optional further material, [ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course) keeps the same data
@@ -85,7 +85,7 @@ and split and goes on to a small neural network; nothing in it is needed here.
 ### Data
 
 `notebooks/data/member_winters.csv` is the full member-winter table (every member of the ensemble, historical experiment), derived by
-the cookbook's own code and committed, so the book builds without touching S3. Every chapter checks its header against the parameters in
+the cookbook's own code and committed, so no chapter needs the heavy S3 read; chapter 1 still opens the catalogue and one store on AWS. Every chapter checks its header against the parameters in
 `notebooks/lensml.py`, and chapter 1 can re-derive it from S3 (`REBUILD = True`; about half an hour on a fast link). Chapter 7 alone reads
 `member_winters_ssp370.csv`, the same members' SSP3-7.0 winters. See [`notebooks/data/README.md`](notebooks/data/README.md).
 
@@ -94,8 +94,8 @@ the cookbook's own code and committed, so the book builds without touching S3. E
 Community Earth System Model v2 Large Ensemble (CESM2 LENS) was accessed on 2026-10-20 (historical) and 2026-10-29 (SSP3-7.0) from
 https://registry.opendata.aws/ncar-cesm2-lens. NSF NCAR asks that both the dataset and the paper be cited:
 
-- Grover, M., & Banihirwe, A. (2021). *NCAR CESM2 Large Ensemble Cloud-Optimized Dataset*. NSF NCAR CISL. https://doi.org/10.26024/y48t-q717
-- Rodgers, K. B. et al. (2021). Ubiquity of human-induced changes in climate variability. *Earth System Dynamics* 12, 1393–1411. https://doi.org/10.5194/esd-12-1393-2021
+- Grover, M., & Banihirwe, A. (2021). *NCAR CESM2 Large Ensemble Cloud-Optimized Dataset*. NSF NCAR CISL. [doi:10.26024/y48t-q717](https://doi.org/10.26024/y48t-q717)
+- Rodgers, K. B. et al. (2021). Ubiquity of human-induced changes in climate variability. *Earth System Dynamics* 12, 1393–1411. [doi:10.5194/esd-12-1393-2021](https://doi.org/10.5194/esd-12-1393-2021)
 
 Results based on the CESM2 Large Ensemble acknowledge the CESM2 Large Ensemble Community Project and supercomputing resources
 provided by the IBS Center for Climate Physics in South Korea. The dataset citation and access line sit under every chapter figure that draws CESM2 LENS data (not
@@ -162,9 +162,7 @@ the chapters read the AWS copy of the ensemble, so no GLADE path is needed.
 ## Licence, provenance and review status
 
 - Code is Apache-2.0; non-code content is CC BY 4.0 (the Project Pythia split). Data are under the UCAR Data Terms of Use (CC BY 4.0).
-- Nothing in this cookbook is export-controlled: open data, open code.
-- Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR or NSF Unidata; it is offered to the
-  Project Pythia community for its own review.
+- Funding: self-funded. This cookbook has not been reviewed or sponsored by NSF NCAR or NSF Unidata.
 - Drafting: Drafted with AI assistance (Anthropic's Claude) from cited sources, under the author's direction, and reviewed by the author in several full read-throughs. Text and code were checked against those sources and the notebooks' own outputs by the author's automated checks (not in this repository) and by separate AI review sessions (also Claude); no human subject-matter expert has reviewed it yet.
 - How it was checked: each chapter's *Resources and references* table lists its sources; the publish workflow re-executes every
   chapter on every build. The author's own checks (not in this repository) compared printed numbers with the prose, and AI review
