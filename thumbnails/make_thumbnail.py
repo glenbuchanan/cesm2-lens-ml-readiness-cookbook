@@ -7,7 +7,7 @@ training members and the held-out test members, with the forced response
 removed and the wet threshold fitted on training members, as chapters 2 and
 6 compute it (lensml.setup, lensml.wet_by_bin). Minimal text, sized to be
 read on a gallery card; the data citation lives in the README and
-CITATION.cff, not on the image.
+notebooks/how-to-cite.md, not on the image.
 
 Run from the repository root:  python thumbnails/make_thumbnail.py
 """
