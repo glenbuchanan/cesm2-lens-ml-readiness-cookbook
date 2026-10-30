@@ -6,7 +6,7 @@
 
 This Project Pythia Cookbook covers _supervised machine learning readiness on a climate-model large ensemble_: one classification
 question — **does the autumn ENSO state predict a wet Front Range winter?** — answered on NSF NCAR's own
-[CESM2 Large Ensemble](https://registry.opendata.aws/ncar-cesm2-lens/) (the AWS Open Data copy; no account, free egress),
+[CESM2 Large Ensemble](https://registry.opendata.aws/ncar-cesm2-lens/) (the AWS Open Data copy; no account needed),
 walked along the analysis spine of NSF Unidata's
 [*Supervised Machine Learning Readiness*](https://github.com/Unidata/supervised-ml-readiness), in seven short chapters.
 
@@ -18,14 +18,14 @@ take about 1 hour 45 minutes, and each runs on its own in under a minute from a 
 ## Motivation
 
 The closest neighbour, in the ProjectPythia organisation though not yet listed in the gallery, is the [Precipitation Machine Learning Cookbook](https://projectpythia.org/ptype-ml-cookbook/), a short
-scikit-learn introduction (regression on surface observations) that accompanies Unidata's CyberTraining. The
+scikit-learn introduction (a regression of dew point on temperature, pressure and wind) that accompanies Unidata's CyberTraining. The
 [CESM LENS on AWS Cookbook](https://projectpythia.org/cesm-lens-aws-cookbook/) covers reading the CESM1 Large Ensemble, and the
 [scikit-learn Argo](https://projectpythia.org/sklearn-argo-cookbook/) (also not yet listed), [Landsat ML](https://projectpythia.org/landsat-ml-cookbook/),
 [xbatcher ML](https://projectpythia.org/xbatcher-ML-1-cookbook/) and [EO Data Science](https://projectpythia.org/eo-datascience-cookbook/)
 cookbooks apply machine learning to other data. None yet walks a newcomer through a supervised classifier on a **large ensemble**,
 where the members themselves are the unit the split has to respect.
 
-So this cookbook changes exactly one of Unidata's steps on purpose: the split is **by ensemble member**, and the forced response and the
+So this cookbook changes one of Unidata's steps on purpose, and adds to two others: the split is **by ensemble member**, and the forced response and the
 wet threshold are fit on training members only. Chapter 3 measures what a member-blind split or a transform fitted before the split
 would do to the score, rather than assuming it. Refinements are promoted on a paired test with a corrected standard error, and the result
 is always read against the base rate of the same winters.
@@ -98,7 +98,7 @@ https://registry.opendata.aws/ncar-cesm2-lens. NSF NCAR asks that both the datas
 - Rodgers, K. B. et al. (2021). Ubiquity of human-induced changes in climate variability. *Earth System Dynamics* 12, 1393–1411. https://doi.org/10.5194/esd-12-1393-2021
 
 Results based on the CESM2 Large Ensemble acknowledge the CESM2 Large Ensemble Community Project and supercomputing resources
-provided by the IBS Center for Climate Physics in South Korea. The same line sits under every figure the chapters draw.
+provided by the IBS Center for Climate Physics in South Korea. The dataset citation and access line sit under every figure that draws CESM2 LENS data.
 
 ## Running the Notebooks
 
