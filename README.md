@@ -46,7 +46,7 @@ By the end you will be able to:
 See the [contributors graph](https://github.com/glenbuchanan/cesm2-lens-ml-readiness-cookbook/graphs/contributors).
 
 The analysis spine follows NSF Unidata's *Supervised Machine Learning Readiness* (Apache-2.0, NSF award #2319979),
-authored by NSF Unidata with Metropolitan State University of Denver. The paired-test functions in `notebooks/lensml.py` adapt
+authored by NSF Unidata in partnership with Metropolitan State University of Denver (per the Unidata course page). The paired-test functions in `notebooks/lensml.py` adapt
 scikit-learn's "Statistical comparison of models using grid search" example (BSD-3-Clause), credited in place.
 
 ## Structure
@@ -76,9 +76,7 @@ scores had been seen. Chapter 7 tests the edge on those members' untouched SSP3-
 a protocol written before that data was read (self-attested; it ships as `notebooks/data/ssp370-test-protocol.md`). **The edge is not
 confirmed:** it does not replicate under the rule fixed before the run, but the test was small. A true edge of chapter 6's size would
 have cleared it only about 42% of the time (chapter 7 prints this), so the result neither confirms nor rules out an edge of that size in CESM2's
-SSP3-7.0 winters
-
-(the interval holds both 0 and chapter 6's +0.018). Chapter 6 states the limits: a
+SSP3-7.0 winters (the interval holds both 0 and chapter 6's +0.018). Chapter 6 states the limits: a
 model-world study, on a ~1° grid, of total precipitation, in DJF, for a box that crosses the Divide.
 
 As optional further material, [ncar-ml-readiness-course](https://github.com/glenbuchanan/ncar-ml-readiness-course) keeps the same data
