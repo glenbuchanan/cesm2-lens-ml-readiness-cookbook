@@ -32,3 +32,4 @@ project:
 site:
   options:
     logo_alt: Project Pythia logo (site home)
+    style: ./a11y.css
