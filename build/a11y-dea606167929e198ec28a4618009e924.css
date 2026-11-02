@@ -1,0 +1,5 @@
+
+pre.jupyter-output {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
